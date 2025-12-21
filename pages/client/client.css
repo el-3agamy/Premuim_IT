@@ -1,0 +1,86 @@
+/* Client Page Specific Styles */
+
+.client-main {
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+
+
+.client-hero {
+    margin-bottom: 80px;
+}
+
+.client-hero-title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+}
+
+.client-hero-p {
+    color: #404640;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.client-logo-item {
+    width: 160px;
+}
+
+
+/* Footer (Shared styles) */
+.footer-main {
+    background: var(--bg-dark);
+    color: white;
+    padding: 24px 0 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+
+/* Responsive adjustments for client grid */
+@media (max-width: 1024px) {
+    .client-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .client-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .client-logo-item {
+        width: 120px;
+    }
+      .footer-main {
+        flex-direction: column !important;
+        align-items: center;      /* center horizontally */
+        gap: 16px;                /* space between social links, logo, and copyright */
+        text-align: center;       /* optional: center text inside */
+    }
+}
+
+@media (max-width: 480px) {
+    .client-grid {
+        grid-template-columns: 1fr;
+    }
+}

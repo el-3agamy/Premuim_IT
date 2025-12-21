@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients - Premium IT</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="./client.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../assets/logo.png" alt="Premium IT Logo">
+                <div class="nav-logo-text">
+                    <span style="display: inline; color:red; font-weight: 700; font-size: 16px;"> Premium</span>
+                   <span style="display: inline; color: grey; font-weight: bold;"> IT</span>
+                    <span style="color: black;">Information Technology</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../industries/industries.html">Industries</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+                <li class="nav-lang"><i data-lucide="languages" class="nav-lang-icon"></i> <a href="#">العربية</a></li>
+            </ul>
+            <button class="mobile-nav-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container client-main">
+        <div class="back-btn-wrapper">
+            <button class="btn-secondary back-btn">
+                <a href="../../index.html">
+                    <i data-lucide="arrow-left" class="back-btn-icon"></i> Back to Home
+                </a>
+            </button>
+        </div>
+
+        <section class="client-hero">
+            <h1 class="h1 client-hero-title">SAP
+                Cloud & Intelligent Platforms</h1>
+            <p class="p-large client-hero-p">Enterprise solutions that
+                drive digital transformation</p>
+        </section>
+
+        <section class="client-grid">
+            <!-- Row 1 -->
+            <img src="../../assets/icons/client_icons/Frame 4.png" alt="Wisys" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/Group 35517.png" alt="Cognizant" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo6.png" alt="Alargan" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo5.png" alt="TCS" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo4.png" alt="Aecon" class="client-logo-item">
+
+            <!-- Row 2 -->
+            <img src="../../assets/icons/client_icons/Frame 4.png" alt="Wisys" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/Group 35517.png" alt="Cognizant" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo6.png" alt="Alargan" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo5.png" alt="TCS" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo4.png" alt="Aecon" class="client-logo-item">
+
+            <!-- Row 3 -->
+            <img src="../../assets/icons/client_icons/Frame 4.png" alt="Wisys" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/Group 35517.png" alt="Cognizant" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo6.png" alt="Alargan" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo5.png" alt="TCS" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo4.png" alt="Aecon" class="client-logo-item">
+
+            <!-- Row 4 -->
+            <img src="../../assets/icons/client_icons/Frame 4.png" alt="Wisys" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/Group 35517.png" alt="Cognizant" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo6.png" alt="Alargan" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo5.png" alt="TCS" class="client-logo-item">
+            <img src="../../assets/icons/client_icons/logo4.png" alt="Aecon" class="client-logo-item">
+        </section>
+    </main>
+
+    <footer class="footer-main">
+
+        <div class="footer-social-links">
+            <a href="#" class="footer-social-link twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" class="footer-social-link linkedin"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="footer-social-link facebook"><i data-lucide="facebook"></i></a>
+        </div>
+        <div class="nav-logo footer-logo-box">
+            <img src="../../assets/footer_logo.png" alt="Premium IT Logo">
+            <div class="nav-logo-text">
+                <span style="display: inline; color: red; font-size: 18px; font-weight: bold;"> Premium</span> 
+               <span style="display: inline; color: #fff; font-weight: bold; font-size: 18px;">IT</span>
+                <span style="color: #fff;">Information Technology</span>
+            </div>
+        </div>
+
+        <div>
+            <p>&copy; 2025 Premium IT. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const toggleBtn = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+            const icon = toggleBtn.querySelector('i');
+            if (navLinks.classList.contains('mobile-active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* Services Page Specific Styles */
+
+.services-main {
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+
+
+.services-hero {
+    margin-bottom: 80px;
+}
+
+.services-hero-title {
+    margin-bottom: 12px;
+}
+
+.services-link {
+    color: var(--primary-color);
+}
+
+/* Flex-based grid replacement */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.service-card {
+    flex: 1 1 calc(33.333% - 32px);
+    min-width: 280px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.service-card-icon-box {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(#BE1E25, #2A0709);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.service-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.service-card-text {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.service-card-text.small {
+    font-size: 14px;
+}
+
+/* Footer */
+.footer-main {
+    background: var(--bg-dark);
+    color: white;
+    padding: 24px 0 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+
+
+/* Responsive adjustments for services grid */
+
