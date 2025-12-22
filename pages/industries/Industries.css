@@ -7,3 +7,11 @@
 .container{
     width: 80%;
 }
+.h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: #101828;
+    line-height: 72px;
+}
