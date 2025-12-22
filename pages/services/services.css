@@ -71,7 +71,6 @@
 
 /* Footer */
 .footer-main {
-    background: var(--bg-dark);
     color: white;
     padding: 24px 0 22px;
     display: flex;

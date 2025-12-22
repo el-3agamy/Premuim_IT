@@ -11,6 +11,8 @@
     --bg-dark: #0C111D;
     --border-color: #EAECF0;
     --font-main: 'Inter', sans-serif;
+    --font-size-subtitle : 20px ;
+    --line-height-subtitle : 30px ;
     --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.1);
 }
@@ -127,16 +129,25 @@ nav {
     font-weight: 400;
     color: var(--text-gray);
 }
-
+#nav_first_span{
+    display: inline; color:red; font-weight: 400; font-size: 19px;
+}
+#nav_second_span{
+    display: inline; color: grey; font-weight: 400;font-size: 19px;
+}
+#nav_third_span{
+    color: black; font-size: 10px; font-weight: bold;
+}
 .nav-links {
     display: flex;
     gap: 32px;
     align-items: center;
+    
 }
 
 .nav-links li a {
     font-weight: 500;
-    color: var(--text-light);
+    color: #2D2323;
     font-size: 16px;
 }
 
@@ -182,7 +193,7 @@ nav {
 
 /* Text styles */
 .section-tag {
-    color: #BE1E25;
+    color: var(--primary-color);
     font-weight: 600;
     line-height: 24px;
 }
@@ -194,6 +205,7 @@ nav {
 
 .about__description {
     margin-bottom: 40px;
+    color: var(--text-light);
 }
 
 /* Features  section*/
@@ -216,9 +228,9 @@ nav {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        #cd272f,
-        #bbafb0,
-        #bbafb0
+        var(--primary-color),
+        var(--text-light),
+        var(--text-light)
     );
     border-radius: 4px;
 }
@@ -257,15 +269,19 @@ nav {
 }
 
 .h1 {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 24px;
+    color: #101828;
+    line-height: 72px;
 }
 
 .p-large {
-    font-size: 18px;
-    color: var(--text-gray);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--text-light);
 }
 
 .btn-primary {
@@ -495,13 +511,17 @@ nav {
 }
 
 .stats-title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
     margin-bottom: 12px;
 }
 
 .stats-subtitle {
-    color: var(--text-gray);
+    color: var(--text-light);
+    font-size: var(--font-size-subtitle);
+    line-height: var(--line-height-subtitle);
+    font-weight: 400;
     margin-bottom: 64px;
 }
 
@@ -525,7 +545,7 @@ nav {
 /* SAP Section */
 .sap-section {
     padding: 100px 0;
-    background: var(--bg-dark);
+    background-color: #000;
     color: white;
 
 }
@@ -536,30 +556,39 @@ nav {
 
 .sap-title {
     color: white;
-    font-size: 6px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
 
 }
 
 .sap-subtitle {
-    color: #98A2B3;
+    color:var(--bg-white);
     max-width: 600px;
     margin: 0 auto 64px;
 }
 
 .sap-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px; */
+
+    display: flex;
     gap: 24px;
+    justify-content: center;
+    align-items: center;
+
+    
 
 }
 
 .sap-card {
-    background: #1D2939;
     padding: 40px;
     border-radius: 12px;
     text-align: left;
     border: 1px solid #344054;
     text-align: center;
+    background-color: #0d0d0d;
 
 }
 
@@ -679,7 +708,15 @@ nav {
 .industries-view-all {
     margin-top: 40px;
 }
-
+#footer_first_span{
+    display: inline; color: red; font-size: 18px; font-weight: bold;
+}
+#footer_second_span{
+    display: inline; color: #fff; font-weight: bold; font-size: 18px;
+}
+#footer_third_span{
+    color: #fff;
+}
 /* Contact Section */
 .contact-section {
     padding: 100px 0;
@@ -795,7 +832,7 @@ nav {
 
 /* Footer */
 .footer-main {
-    background: var(--bg-dark);
+  background-color: #000 !important;
     color: white;
     padding: 24px 0 22px;
     display: flex;
@@ -861,23 +898,44 @@ nav {
 
     .h1 {
         font-size: 28px !important;
+        line-height: normal;
+        >br{
+            display: none;
+        }
     }
 
     .p-large {
+
         font-size: 15px !important;
+        line-height: normal;
+        >br{
+            display: none;
+        }
     }
 
+    .see-all-btn {
+        margin-bottom: 30px;
+    }
+
+    .about__description > br{
+        display: none;
+    }
     .about__title,
     .sap-title,
     .industries-title,
     .contact-title {
         font-size: 24px !important;
+        line-height: normal;
+        
     }
 
     .stats-title {
         font-size: 20px !important;
     }
-
+    .stats-subtitle{
+        font-size: medium;
+        line-height: normal;
+    }
     .stats-item-value {
         font-size: 36px !important;
     }
@@ -944,8 +1002,10 @@ nav {
 
     /* SAP Section */
     .sap-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        /* grid-template-columns: 1fr;
+        gap: 24px; */
+        flex-direction: column;
+        gap: 30px;
     }
 
     .sap-card {
@@ -968,7 +1028,10 @@ nav {
     .industry-card-title {
         font-size: 24px;
     }
-
+    .industries-view-all{
+        margin-bottom: 30px;
+    }
+    
     /* Contact Section */
     .contact-grid {
         grid-template-columns: 1fr;
@@ -984,3 +1047,4 @@ nav {
         grid-column: span 2;
     }
 }
+
