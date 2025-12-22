@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium IT - Intelligent Execution</title>
+    <title>Premium IT </title>
     <link rel="stylesheet" href="./index.css">
-    <!-- Lucide Icons for premium feel -->
+    <!-- Lucide Icons  -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -40,12 +40,15 @@
         <section id="hero" class="container grid-pattern hero-section">
             <div class="hero-content">
                 <div class="hero-icons-container">
+
                     <div id="iconLeft" class="hero-icon-box animate-float zap">
                         <i data-lucide="zap"></i>
                     </div>
-                    <div class="connecting-line">
-                       
-                    </div>
+
+                    <!-- animation line between icons  -->
+                    <div class="connecting-line"> </div>
+                    <!-- animation line between icons  -->
+
                     <div id="iconRight" class="hero-icon-box animate-float-delayed cloud">
                         <i data-lucide="cloud"></i>
                     </div>
@@ -362,6 +365,10 @@
             lucide.createIcons();
         });
 
+        navLinks.addEventListener("click" , function(){
+            this.classList.remove('mobile-active')
+        }
+        )
        
     </script>
 </body>
