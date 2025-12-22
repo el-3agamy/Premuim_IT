@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://el-3agamy.github.io/Premuim_IT/sitemap.xml
