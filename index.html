@@ -315,28 +315,45 @@
                             </div>
                         </div>
 
-                        <form class="contact-form" id="take-to-export">
-                            <div class="form-group-half">
-                                <label class="form-label">First name</label>
-                                <input type="text" placeholder="First name" class="form-input">
-                            </div>
-                            <div class="form-group-half">
-                                <label class="form-label">Last name</label>
-                                <input type="text" placeholder="Last name" class="form-input">
-                            </div>
-                            <div class="form-group-full">
-                                <label class="form-label">Email</label>
-                                <input type="email" placeholder="you@Company.com" class="form-input">
-                            </div>
-                            <div class="form-group-full">
-                                <label class="form-label">Message</label>
-                                <textarea placeholder="Leave us a message..."
-                                    class="form-input form-textarea"></textarea>
-                            </div>
-                            <div class="form-group-full">
-                                <button type="submit" class="btn-primary form-submit-btn">Send message</button>
-                            </div>
-                        </form>
+
+                        <!-- // service ID :service_xelfw6h -->
+                       <form class="contact-form" id="contact-form">
+  <div class="form-group-half">
+    <label class="form-label">First name</label>
+    <input type="text" name="first_name" class="form-input" minlength="3" maxlength="15" required>
+  </div>
+
+  <div class="form-group-half">
+    <label class="form-label">Last name</label>
+    <input type="text" name="last_name" class="form-input" minlength="3" maxlength="15" required>
+  </div>
+
+  <div class="form-group-full">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" class="form-input"  required>
+  </div>
+
+  <div class="form-group-full">
+    <label class="form-label">Message</label>
+    <textarea name="message" class="form-input form-textarea" required></textarea>
+  </div>
+
+  <div class="form-group-full">
+    <button type="submit" class="btn-primary form-submit-btn" id="submit-btn">
+      <span class="btn-text">Send message</span>
+      <span class="btn-loader"></span>
+    </button>
+  </div>
+
+  <p class="form-status success" id="success-msg">
+    ✅ Message sent successfully
+  </p>
+
+  <p class="form-status error" id="error-msg">
+    ❌ Something went wrong, try again
+  </p>
+</form>
+
                     </div>
                 </div>
             </section>
@@ -360,6 +377,7 @@
             <p>&copy; 2025 Premium IT. All rights reserved.</p>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script>
         // Initialize Lucide icons
@@ -379,7 +397,42 @@
         navLinks.addEventListener("click" , function(){
             this.classList.remove('mobile-active')
         }
-        )
+        ) ;
+
+        // email js 
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+  const form = document.getElementById("contact-form");
+  const btn = document.getElementById("submit-btn");
+  const successMsg = document.getElementById("success-msg");
+  const errorMsg = document.getElementById("error-msg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Reset messages
+    successMsg.style.display = "none";
+    errorMsg.style.display = "none";
+
+    // Loading ON
+    btn.classList.add("loading");
+
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      form
+    ).then(() => {
+      // Success
+      btn.classList.remove("loading");
+      successMsg.style.display = "block";
+      form.reset();
+    }).catch(() => {
+      // Error
+      btn.classList.remove("loading");
+      errorMsg.style.display = "block";
+    });
+  });
+
        
     </script>
 </body>

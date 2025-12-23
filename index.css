@@ -830,6 +830,50 @@ nav {
     width: 100%;
 }
 
+/* Button loader */
+.btn-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loading state */
+button.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+button.loading .btn-text {
+  display: none;
+}
+
+button.loading .btn-loader {
+  display: inline-block;
+}
+
+/* Status messages */
+.form-status {
+  display: none;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.form-status.success {
+  color: #16a34a;
+}
+
+.form-status.error {
+  color: #dc2626;
+}
+
 
 /* Footer */
 .footer-main {
