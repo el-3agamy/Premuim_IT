@@ -497,8 +497,10 @@ nav {
 
 .see-all-btn {
     margin-top: 32px;
-    font-weight: 600;
-    font-size: 14px;
+    /* font-weight: 600;
+    font-size: 14px; */
+     font-weight: 700;
+    font-size: 20px;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 4px;
 }
@@ -960,6 +962,7 @@ button.loading .btn-loader {
 
     .see-all-btn {
         margin-bottom: 30px;
+        
     }
 
     .about__description > br{
