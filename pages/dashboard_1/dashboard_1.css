@@ -320,6 +320,18 @@ textarea:focus {
   background: #ededf0;
 }
 
+/* popup */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
 @media (max-width : 738px){
   .main_container{
     flex-direction: column;
@@ -343,13 +355,26 @@ textarea:focus {
     width: 150px ;
     padding: 5px;
   }
+  .aside_content p{
+   font-size: 14px;
+   font-weight: 400;
+}
   main{
     display: flex;
     flex-direction: column-reverse;
+    padding: 50px 0;
   }
   main div p {
     font-size: 14px;
     display: none;
+  }
+  main nav{
+    width: 90% !important;
+    margin: auto;
+    margin: 30px auto;
+
+   border: 1px solid #ba7a7af1;
+    border-radius: 10px;
   }
   main ul {
     margin: auto;
@@ -357,12 +382,10 @@ textarea:focus {
     justify-content: space-around;
     width: 100%;
     padding-inline-start: 0;
-    border: 1px solid red;
-    border-radius: 10px;
+    /* border: 1px solid red;
+    border-radius: 10px; */
     padding: 10px;
 
   }
-  main ul li:nth-child(1) button{
-      background-color: #000;
-  }
+
 }
