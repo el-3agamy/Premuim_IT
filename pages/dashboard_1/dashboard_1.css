@@ -293,11 +293,12 @@ nav ul {
 }
 
 main ul {
-  list-style: none; 
-  display: flex; 
+  list-style: none;
+  display: flex;
   justify-content: space-around;
 
 }
+
 /* updating  */
 
 
@@ -324,7 +325,7 @@ textarea:focus {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0, 0, 0, .6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,6 +364,11 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+
 }
 
 .popup-content.industry-popup {
@@ -406,19 +412,21 @@ textarea:focus {
 
 /* Mobile Responsive Styles for Popups */
 @media (max-width: 768px) {
-  .contact{
+  .contact {
     display: flex;
     flex-direction: column !important;
   }
-  .contact .row{
+
+  .contact .row {
     flex-direction: column !important;
   }
 
-   .office-mobile{
+  .office-mobile {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .po pup-overlay {
     padding: 10px;
   }
@@ -462,11 +470,12 @@ textarea:focus {
   }
 }
 
-@media (max-width: 738px){
-  .main_container{
+@media (max-width: 738px) {
+  .main_container {
     flex-direction: column;
   }
-  .main_container aside{
+
+  .main_container aside {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -476,36 +485,42 @@ textarea:focus {
 
   }
 
-  aside .nav-logo-text{
+  aside .nav-logo-text {
     font-size: 14px;
 
   }
+
   aside .aside_content {
     padding: 0 !important;
-    width: 150px ;
+    width: 150px;
     padding: 5px;
   }
-  .aside_content p{
-   font-size: 14px;
-   font-weight: 400;
-}
-  main{
+
+  .aside_content p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  main {
     display: flex;
     flex-direction: column-reverse;
     padding: 50px 0;
   }
+
   main div p {
     font-size: 14px;
     display: none;
   }
-  main nav{
+
+  main nav {
     width: 90% !important;
     margin: auto;
     margin: 30px auto;
 
-   border: 1px solid #ba7a7af1;
+    border: 1px solid #ba7a7af1;
     border-radius: 10px;
   }
+
   main ul {
     margin: auto;
     display: flex;

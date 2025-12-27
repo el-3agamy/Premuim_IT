@@ -1,17 +1,17 @@
-    lucide.createIcons();
-    const client_logo_popup = document.getElementById('client_logo_popup') ;
-    const client_logo_add_btn = document.getElementById('client_logo_add_btn') ;
-    const close_btn_popup = document.getElementById("close_btn_popup");
-    const add_btn_popup = document.getElementById('add_btn_popup');
-    const client_logos_container = document.getElementById ('client_logos_container') ;
-  client_logo_popup.addEventListener('click', (e) => {
+lucide.createIcons();
+const client_logo_popup = document.getElementById('client_logo_popup');
+const client_logo_add_btn = document.getElementById('client_logo_add_btn');
+const close_btn_popup = document.getElementById("close_btn_popup");
+const add_btn_popup = document.getElementById('add_btn_popup');
+const client_logos_container = document.getElementById('client_logos_container');
+client_logo_popup.addEventListener('click', (e) => {
   if (e.target === client_logo_popup) {
     e.stopPropagation();
     client_logo_popup.style.display = "none";
     document.body.classList.remove('modal-open');
   }
 });
-  add_btn_popup.addEventListener('click', () => {
+add_btn_popup.addEventListener('click', () => {
   // main wrapper
   const div = document.createElement('div');
   div.classList.add('update');
@@ -87,59 +87,59 @@
 });
 
 
-    close_btn_popup.addEventListener('click' , ()=>{
-      client_logo_popup.style.display = "none"
-    })
-    client_logo_popup.style.display = "none" ;
-    client_logo_add_btn.addEventListener('click' , ()=>{
-      client_logo_popup.style.display = "block"
-    })
-    
+close_btn_popup.addEventListener('click', () => {
+  client_logo_popup.style.display = "none"
+})
+client_logo_popup.style.display = "none";
+client_logo_add_btn.addEventListener('click', () => {
+  client_logo_popup.style.display = "block"
+})
 
 
-    //////////////////////////
 
-    // industry popup section :
-  const industry_add_popup = document.getElementById('industry_add_popup');
-  const industry_popup = document.getElementById('industry_popup');
-  const industry_close_btn_popup = document.getElementById('industry_close_btn_popup');
-  const industry_add_btn_popup = document.getElementById('industry_add_btn_popup');
-  const industry_container = document.getElementById('industry_container');
+//////////////////////////
 
-  industry_popup.style.display = "none"
-  industry_popup.addEventListener('click' , (e)=>{
-    if(e.target === industry_popup){
-        e.target.style.display = "none"
-    }
-  })
-  // Show popup
-  industry_add_popup.addEventListener('click', () => {
-    industry_popup.style.display = 'flex';
+// industry popup section :
+const industry_add_popup = document.getElementById('industry_add_popup');
+const industry_popup = document.getElementById('industry_popup');
+const industry_close_btn_popup = document.getElementById('industry_close_btn_popup');
+const industry_add_btn_popup = document.getElementById('industry_add_btn_popup');
+const industry_container = document.getElementById('industry_container');
+
+industry_popup.style.display = "none"
+industry_popup.addEventListener('click', (e) => {
+  if (e.target === industry_popup) {
+    e.target.style.display = "none"
+  }
+})
+// Show popup
+industry_add_popup.addEventListener('click', () => {
+  industry_popup.style.display = 'flex';
+});
+
+// Close popup
+industry_close_btn_popup.addEventListener('click', () => {
+  industry_popup.style.display = 'none';
+});
+
+// Add industry from popup
+industry_add_btn_popup.addEventListener('click', () => {
+  // Get values from inputs
+  const title = document.getElementById('industry_title').value;
+  const description = document.getElementById('industry_description').value;
+
+  // Key benefits: get all inputs inside popup
+  const keyBenefitInputs = industry_popup.querySelectorAll('#key_benfites');
+  const keyBenefits = [];
+  keyBenefitInputs.forEach(input => {
+    if (input.value.trim() !== '') keyBenefits.push(input.value.trim());
   });
 
-  // Close popup
-  industry_close_btn_popup.addEventListener('click', () => {
-    industry_popup.style.display = 'none';
-  });
-
-  // Add industry from popup
-  industry_add_btn_popup.addEventListener('click', () => {
-    // Get values from inputs
-    const title = document.getElementById('industry_title').value;
-    const description = document.getElementById('industry_description').value;
-    
-    // Key benefits: get all inputs inside popup
-    const keyBenefitInputs = industry_popup.querySelectorAll('#key_benfites');
-    const keyBenefits = [];
-    keyBenefitInputs.forEach(input => {
-      if (input.value.trim() !== '') keyBenefits.push(input.value.trim());
-    });
-
-    // Create new industry div
-    const newIndustry = document.createElement('div');
-    newIndustry.classList.add('industry');
-    newIndustry.style.margin = '20px 0';
-    newIndustry.innerHTML = `
+  // Create new industry div
+  const newIndustry = document.createElement('div');
+  newIndustry.classList.add('industry');
+  newIndustry.style.margin = '20px 0';
+  newIndustry.innerHTML = `
       <label>Industry Title : <input value="${title}"></label>
       <label>Industry Description : <textarea>${description}</textarea></label>
       <label>Key Benefits :</label>
@@ -154,71 +154,71 @@
       </div>
     `;
 
-    // Insert new industry at the top
-    industry_container.prepend(newIndustry);
+  // Insert new industry at the top
+  industry_container.prepend(newIndustry);
 
-    // Reset popup inputs if needed
-    document.getElementById('industry_title').value = '';
-    document.getElementById('industry_description').value = '';
-    keyBenefitInputs.forEach(input => input.value = '');
-
-    // Close popup
-    industry_popup.style.display = 'none';
-
-    // Re-initialize lucide icons for new elements
-    if (window.lucide) lucide.replace();
-  });
-
-
-  ////////////////////////////////////////
-  
-  // Service popup section
-  const service_popup_add_btn = document.getElementById('service_popup_add_btn');
-  const service_popup = document.getElementById('service_popup');
-  const service_close_btn_popup = document.getElementById('service_close_btn_popup');
-  const service_add_btn_popup = document.getElementById('service_add_btn_popup');
-  const service_container = document.getElementById('service_container');
-
-  // Hide popup initially
-  service_popup.style.display = "none";
-
-  // Click outside popup closes it
-  service_popup.addEventListener('click', (e) => {
-    if (e.target === service_popup) {
-      service_popup.style.display = "none";
-    }
-  });
-
-  // Show popup when add button clicked
-  service_popup_add_btn.addEventListener('click', () => {
-    service_popup.style.display = 'flex';
-  });
+  // Reset popup inputs if needed
+  document.getElementById('industry_title').value = '';
+  document.getElementById('industry_description').value = '';
+  keyBenefitInputs.forEach(input => input.value = '');
 
   // Close popup
-  service_close_btn_popup.addEventListener('click', () => {
-    service_popup.style.display = 'none';
-  });
+  industry_popup.style.display = 'none';
 
-  // Add service from popup
-  service_add_btn_popup.addEventListener('click', () => {
-    // Get values from popup inputs
-    const title = document.getElementById('service_title_popup').value;
-    const icon = document.getElementById('service_icon_popup').value;
-    const description = document.getElementById('service_description_popup').value;
-    const ctaLabel = document.getElementById('cta_label_popup').value;
-    const ctaUrl = document.getElementById('cta_url_popup').value;
+  // Re-initialize lucide icons for new elements
+  if (window.lucide) lucide.createIcons();
+});
 
-    // Validation - at least title is required
-    if (!title.trim()) {
-      alert('Service title is required!');
-      return;
-    }
 
-    // Create new service div
-    const newService = document.createElement('div');
-    newService.classList.add('service');
-    newService.style.margin = '20px 0';
-    newService.innerHTML = `
+////////////////////////////////////////
+
+// Service popup section
+const service_popup_add_btn = document.getElementById('service_popup_add_btn');
+const service_popup = document.getElementById('service_popup');
+const service_close_btn_popup = document.getElementById('service_close_btn_popup');
+const service_add_btn_popup = document.getElementById('service_add_btn_popup');
+const service_container = document.getElementById('service_container');
+
+// Hide popup initially
+service_popup.style.display = "none";
+
+// Click outside popup closes it
+service_popup.addEventListener('click', (e) => {
+  if (e.target === service_popup) {
+    service_popup.style.display = "none";
+  }
+});
+
+// Show popup when add button clicked
+service_popup_add_btn.addEventListener('click', () => {
+  service_popup.style.display = 'flex';
+});
+
+// Close popup
+service_close_btn_popup.addEventListener('click', () => {
+  service_popup.style.display = 'none';
+});
+
+// Add service from popup
+service_add_btn_popup.addEventListener('click', () => {
+  // Get values from popup inputs
+  const title = document.getElementById('service_title_popup').value;
+  const icon = document.getElementById('service_icon_popup').value;
+  const description = document.getElementById('service_description_popup').value;
+  const ctaLabel = document.getElementById('cta_label_popup').value;
+  const ctaUrl = document.getElementById('cta_url_popup').value;
+
+  // Validation - at least title is required
+  if (!title.trim()) {
+    alert('Service title is required!');
+    return;
+  }
+
+  // Create new service div
+  const newService = document.createElement('div');
+  newService.classList.add('service');
+  newService.style.margin = '20px 0';
+  newService.innerHTML = `
       <div class="inner_service">
         <label for="service_title">Service Title : <input value="${title}"></label>
         <label for="service_icon">Service Icon : <input value="${icon}"></label>
@@ -232,19 +232,111 @@
       </div>
     `;
 
-    // Insert new service at the top
-    service_container.prepend(newService);
+  // Insert new service at the top
+  service_container.prepend(newService);
 
-    // Reset popup inputs
-    document.getElementById('service_title_popup').value = '';
-    document.getElementById('service_icon_popup').value = '';
-    document.getElementById('service_description_popup').value = '';
-    document.getElementById('cta_label_popup').value = '';
-    document.getElementById('cta_url_popup').value = '';
+  // Reset popup inputs
+  document.getElementById('service_title_popup').value = '';
+  document.getElementById('service_icon_popup').value = '';
+  document.getElementById('service_description_popup').value = '';
+  document.getElementById('cta_label_popup').value = '';
+  document.getElementById('cta_url_popup').value = '';
+
+  // Close popup
+  service_popup.style.display = 'none';
+
+  // Re-initialize lucide icons if needed
+  if (window.lucide) lucide.createIcons();
+});
+
+ // --- Office Popup Elements ---
+    const office_popup = document.getElementById('office_popup');
+    const office_popup_add_btn = document.getElementById('office_popup_add_btn'); // button that opens popup
+    const office_close_btn_popup = document.getElementById('office_close_btn_popup');
+    const office_add_btn_popup = document.getElementById('office_add_btn_popup'); // button inside popup to add office
+    const office_container = document.querySelector('#office_container'); // container for offices
+
+    // Hide popup initially
+    office_popup.style.display = 'none';
+
+    // Open popup
+    office_popup_add_btn.addEventListener('click', () => {
+      office_popup.style.display = 'flex';
+    });
 
     // Close popup
-    service_popup.style.display = 'none';
+    office_close_btn_popup.addEventListener('click', () => {
+      office_popup.style.display = 'none';
+    });
 
-    // Re-initialize lucide icons if needed
-    if (window.lucide) lucide.replace();
-  });
+    // Click outside popup closes it
+    office_popup.addEventListener('click', (e) => {
+      if (e.target === office_popup) {
+        office_popup.style.display = 'none';
+      }
+    });
+
+    // Function to create new office element
+    function createOffice(country, address, phone) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('inner_presence');
+      wrapper.style.display = 'flex';
+      wrapper.style.alignItems = 'center';
+      wrapper.style.justifyContent = 'space-between';
+      wrapper.style.marginBottom = '10px';
+
+      const officeDiv = document.createElement('div');
+      officeDiv.classList.add('office');
+      officeDiv.innerHTML = `
+      <label for="country">country : <input value="${country}"></label>
+      <label for="address">Adress : <input value="${address}"></label>
+      <label for="presence_phone">Phone : <input value="${phone}"></label>
+
+    `;
+
+      const trashBtn = document.createElement('button');
+      trashBtn.classList.add('danger');
+      trashBtn.innerHTML = `<i data-lucide="trash-2"></i>`;
+
+      // Trash button click removes the office wrapper
+      trashBtn.addEventListener('click', () => {
+        wrapper.remove();
+      });
+
+      wrapper.appendChild(officeDiv);
+      wrapper.appendChild(trashBtn);
+
+      return wrapper;
+    }
+
+    // Add new office
+    office_add_btn_popup.addEventListener('click', () => {
+      const country = office_popup.querySelector('input[placeholder="United States"]').value;
+      const address = office_popup.querySelector('input[placeholder^="123"]').value;
+      const phone = office_popup.querySelector('input[placeholder^="+1"]').value;
+
+      if (!country && !address && !phone) return; // do not add empty
+
+      const newOffice = createOffice(country, address, phone);
+
+      // Add new office at the top
+      office_container.prepend(newOffice);
+
+      // Clear popup inputs
+      office_popup.querySelector('input[placeholder="United States"]').value = '';
+      office_popup.querySelector('input[placeholder^="123"]').value = '';
+      office_popup.querySelector('input[placeholder^="+1"]').value = '';
+
+      // Close popup
+      office_popup.style.display = 'none';
+
+      // Re-initialize lucide icons
+      if (window.lucide) lucide.createIcons();
+    });
+
+    // --- Optional: Make existing trash buttons work ---
+    document.querySelectorAll('#office_container .danger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.remove();
+      });
+    });
