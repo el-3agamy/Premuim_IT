@@ -13,6 +13,116 @@
 </head>
 
 <body>
+  <!--  client logo pupup -->
+  <div id="client_logo_popup"
+    style="padding: 20px; height: 100vh; display: flex; justify-content: center; background-color: #622b2b68; position: fixed;top: 0; left: 0; right: 0; bottom: 0; z-index: 99999;">
+    <div class="update"
+      style="width: 800px; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;gap: 20px;margin: auto;position: fixed;top: 0; bottom: 0; left: 0; right: 0; ">
+      <div class="logo-row">
+        <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
+        <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
+        <button class="danger"><i data-lucide="trash-2"></i></button>
+
+      </div>
+      <div>
+        <label>Logo</label>
+        <div class="upload">
+          <i data-lucide="image"></i>
+          <span>Upload new image</span>
+          <button><input type="file" accept="image/*" /></button>
+        </div>
+      </div>
+      <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
+      <div class="btns" style="display: flex; justify-content: center; align-items: center;gap: 100px;">
+        <button id="add_btn_popup" style="background-color:rgb(62, 117, 62); color: #fff; ">Add</button>
+        <button id="close_btn_popup" style="background-color: red;color: #fff;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  industry popup  -->
+  <div id="industry_popup"
+    style=" height: 100vh; display: flex; justify-content: center;align-items: center; background-color: #622b2b68; position: fixed;top: 0; left: 0; right: 0; bottom: 0; z-index: 99999;">
+    <div class="industry" style="width: 60%; height: 100%;margin: auto;">
+      <label for="industry_title">Industry Title : <input id="industry_title" value="Healthcare"></label>
+      <label for="industry_description"> Industry description : <textarea
+          id="industry_description">HIPAA-compliant solutions for medical institutions</textarea></label>
+      <label for="key_benfites">
+        Key benfites
+        <input type="text" value="Electronic health records integration" name="" id="key_benfites" /> <br> <br>
+        <input type="text" value="Patient data security" name="" id="key_benfites" /> <br> <br>
+        <input type="text" value="Telemedicine infrastructure" name="" id="key_benfites" /><br> <br>
+      </label>
+      <div>
+        <label>Logo</label>
+        <div class="upload">
+          <i data-lucide="image"></i>
+          <span>Upload new image</span>
+          <button><input type="file" accept="image/*" /></button>
+
+        </div>
+      </div>
+
+      <div class="btns"
+        style="display: flex; justify-content: center; align-items: center;gap: 100px; margin-top: 10px;">
+        <button id="industry_add_btn_popup" style="background-color:rgb(62, 117, 62); color: #fff; ">Add</button>
+        <button id="industry_close_btn_popup" style="background-color: red;color: #fff;">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- office popup -->
+
+  <div id="office_popup"
+    style=" height: 100vh; display: flex; justify-content: center;align-items: center; background-color: #622b2b68; position: fixed;top: 0; left: 0; right: 0; bottom: 0; z-index: 99999;">
+
+    <div class="office"
+      style="width: 800px; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;gap: 20px;margin: auto;position: fixed;top: 0; bottom: 0; left: 0; right: 0; background-color: #fff; border-radius: 10px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <div style="padding: 20px;">
+          <label for="country" style="width: 100%; padding: 10px;">country : <input placeholder="United States"></label>
+          <label for="address" style="width: 100%; padding: 10px;">Adress : <input
+              placeholder="123 Tech Road, San Francisco, CA"></label>
+          <label for="presence_phone" style="width: 100%; padding: 10px;">Phone : <input
+              placeholder="+1 555 123 4567"></label>
+        </div>
+        <button class="danger"><i data-lucide="trash-2"></i></button>
+
+      </div>
+      <div class="btns"
+        style="display: flex; justify-content: center; align-items: center;gap: 100px; margin-top: 10px;">
+        <button id="office_add_btn_popup" style="background-color:rgb(62, 117, 62); color: #fff; ">Add</button>
+        <button id="office_close_btn_popup" style="background-color: red;color: #fff;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  service popup  -->
+  <div id="service_popup"
+    style="height: 100vh; display: flex; justify-content: center;align-items: center; background-color: #622b2b68; position: fixed;top: 0; left: 0; right: 0; bottom: 0; z-index: 99999;">
+    <div class="service"
+      style="width: 60%; height: auto; margin: auto; padding: 30px; background-color: #fff; border-radius: 10px; max-height: 90vh; overflow-y: auto;">
+      <div class="inner_service">
+        <label for="service_title_popup">Service Title: <input id="service_title_popup"
+            placeholder="Cloud Transformation"></label>
+        <label for="service_icon_popup">Service Icon: <input id="service_icon_popup" placeholder="Cloud"></label>
+      </div>
+      <div>
+        <label for="service_description_popup">Service description: <textarea id="service_description_popup"
+            placeholder="Scalable migration and management of cloud infrastructure"></textarea></label>
+      </div>
+      <div class="inner_service">
+        <label for="cta_label_popup">CTA Label (Optional): <input id="cta_label_popup" placeholder="Learn More"></label>
+        <label for="cta_url_popup">CTA URL (Optional): <input id="cta_url_popup" placeholder="/services/cloud"></label>
+      </div>
+      <div class="btns"
+        style="display: flex; justify-content: center; align-items: center; gap: 100px; margin-top: 20px;">
+        <button id="service_add_btn_popup" style="background-color:rgb(62, 117, 62); color: #fff;">Add</button>
+        <button id="service_close_btn_popup" style="background-color: red; color: #fff;">Close</button>
+      </div>
+    </div>
+  </div>
 
   <div class="main_container">
     <aside>
@@ -107,44 +217,48 @@
         <section class="card">
           <h3>Client Logos</h3>
 
-          <div class="update">
-            <div class="logo-row">
-              <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
-              <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
-              <button class="danger"><i data-lucide="trash-2"></i></button>
+          <div id="client_logos_container">
 
-            </div>
-            <div>
-              <label>Logo</label>
-              <div class="upload">
-                <i data-lucide="image"></i>
-                <span>Upload new image</span>
-                <button><input type="file" accept="image/*" /></button>
+            <div class="update" style="margin: 20px 0 ;">
+              <div class="logo-row">
+                <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
+                <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
+                <button class="danger"><i data-lucide="trash-2"></i></button>
 
               </div>
-            </div>
-            <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
-          </div>
-          <div class="update">
-            <div class="logo-row">
-              <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
-              <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
-              <button class="danger"><i data-lucide="trash-2"></i></button>
+              <div>
+                <label>Logo</label>
+                <div class="upload">
+                  <i data-lucide="image"></i>
+                  <span>Upload new image</span>
+                  <button><input type="file" accept="image/*" /></button>
 
-            </div>
-            <div>
-              <label>Logo</label>
-              <div class="upload">
-                <i data-lucide="image"></i>
-                <span>Upload new image</span>
-                <button><input type="file" accept="image/*" /></button>
+                </div>
               </div>
+              <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
             </div>
-            <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
+
+            <div class="update" style="margin: 20px 0;">
+              <div class="logo-row">
+                <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
+                <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
+                <button class="danger"><i data-lucide="trash-2"></i></button>
+
+              </div>
+              <div>
+                <label>Logo</label>
+                <div class="upload">
+                  <i data-lucide="image"></i>
+                  <span>Upload new image</span>
+                  <button><input type="file" accept="image/*" /></button>
+                </div>
+              </div>
+              <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
+            </div>
           </div>
 
 
-          <button class="add">+ Add client logo</button>
+          <button class="add" id="client_logo_add_btn">+ Add client logo</button>
         </section>
 
         <!-- ABOUT -->
@@ -180,54 +294,56 @@
             <span style="font-size: 14px; font-weight: 200px; color: #575454;">Service You Provide For Clients.</span>
           </h3>
 
-          <div class="service">
-            <div class="inner_service">
-              <label for="service_title">Service Title : <input value="Cloud Transformation"></label>
-              <label for="service_icon">Service Icon : <input value="Cloud"></label>
-            </div>
-            <div class="">
-              <label for="service_description">Service description : <textarea
-                  id="service_description">Scalable migration and management of cloud infrastructure</textarea></label>
-            </div>
-            <div class="inner_service">
-              <label for="cta_label">CTA Label(Optianal) : <input value="Cloud"></label>
-              <label for="cta_url">CTA URL(Optianal) : <input value="AWS, Azure, GCP"></label>
+          <div id="service_container">
+            <div class="service">
+              <div class="inner_service">
+                <label for="service_title">Service Title : <input value="Cloud Transformation"></label>
+                <label for="service_icon">Service Icon : <input value="Cloud"></label>
+              </div>
+              <div class="">
+                <label for="service_description">Service description : <textarea
+                    id="service_description">Scalable migration and management of cloud infrastructure</textarea></label>
+              </div>
+              <div class="inner_service">
+                <label for="cta_label">CTA Label(Optianal) : <input value="Cloud"></label>
+                <label for="cta_url">CTA URL(Optianal) : <input value="AWS, Azure, GCP"></label>
+              </div>
             </div>
           </div>
 
-
-
-          <button class="add">+ Add service</button>
+          <button class="add" id="service_popup_add_btn">+ Add service</button>
         </section>
 
         <!-- INDUSTRIES -->
         <section class="card">
           <h3>Industries</h3>
 
-          <div class="industry">
-            <label for="industry_title">Industry Title : <input id="industry_title" value="Healthcare"></label>
-            <label for="industry_description"> Industry description : <textarea
-                id="industry_description">HIPAA-compliant solutions for medical institutions</textarea></label>
-            <label for="key_benfites">
-              Key benfites
-              <input type="text" value="Electronic health records integration" name="" id="key_benfites" /> <br> <br>
-              <input type="text" value="Patient data security" name="" id="key_benfites" /> <br> <br>
-              <input type="text" value="Telemedicine infrastructure" name="" id="key_benfites" /><br> <br>
-            </label>
-            <div>
-              <label>Logo</label>
-              <div class="upload">
-                <i data-lucide="image"></i>
-                <span>Upload new image</span>
-                <button><input type="file" accept="image/*" /></button>
+          <div id="industry_container">
+            <div class="industry">
+              <label for="industry_title">Industry Title : <input id="industry_title" value="Healthcare"></label>
+              <label for="industry_description"> Industry description : <textarea
+                  id="industry_description">HIPAA-compliant solutions for medical institutions</textarea></label>
+              <label for="key_benfites">
+                Key benfites
+                <input type="text" value="Electronic health records integration" name="" id="key_benfites" /> <br> <br>
+                <input type="text" value="Patient data security" name="" id="key_benfites" /> <br> <br>
+                <input type="text" value="Telemedicine infrastructure" name="" id="key_benfites" /><br> <br>
+              </label>
+              <div>
+                <label>Logo</label>
+                <div class="upload">
+                  <i data-lucide="image"></i>
+                  <span>Upload new image</span>
+                  <button><input type="file" accept="image/*" /></button>
 
+                </div>
               </div>
+
             </div>
 
           </div>
 
-
-          <button class="add">+ Add industry</button>
+          <button class="add" id="industry_add_popup">+ Add industry</button>
         </section>
 
         <!-- GLOBAL PRESENCE -->
@@ -235,21 +351,23 @@
           <h3>Global Presence</h3>
           <p>Your Office Locations WorldWide: </p>
 
-          <div class="inner_presence">
+          <div id="office_container" style="display: flex; flex-direction: column;">
 
-            <div class="office">
-              <label for="country">country : <input placeholder="United States"></label>
-              <label for="address">Adress : <input placeholder="123 Tech Road, San Francisco, CA"></label>
-              <label for="presence_phone">Phone : <input placeholder="+1 555 123 4567"></label>
+            <div class="inner_presence office-mobile">
+              <div class="office">
+                <label for="country">country : <input placeholder="United States"></label>
+                <label for="address">Adress : <input placeholder="123 Tech Road, San Francisco, CA"></label>
+                <label for="presence_phone">Phone : <input placeholder="+1 555 123 4567"></label>
+              </div>
+              <button class="danger"><i data-lucide="trash-2"></i></button>
             </div>
-            <button class="danger"><i data-lucide="trash-2"></i></button>
 
           </div>
           <div>
-        
+
           </div>
 
-          <button class="add">+ Add office</button>
+          <button class="add" id="office_popup_add_btn">+ Add office</button>
         </section>
 
         <!-- CONTACT -->
@@ -267,9 +385,7 @@
           </div>
 
           <textarea placeholder="Your message"></textarea>
-
           <input value="Thank you! We'll get back to you within 24 hours.">
-
           <input class="error" value="Sorry, something went wrong. Please try again later.">
         </section>
       </div>
@@ -277,9 +393,102 @@
     </main>
 
   </div>
+  <script src="./dashboard.js"></script>
   <script>
-    lucide.createIcons();
+    // --- Office Popup Elements ---
+    const office_popup = document.getElementById('office_popup');
+    const office_popup_add_btn = document.getElementById('office_popup_add_btn'); // button that opens popup
+    const office_close_btn_popup = document.getElementById('office_close_btn_popup');
+    const office_add_btn_popup = document.getElementById('office_add_btn_popup'); // button inside popup to add office
+    const office_container = document.querySelector('#office_container'); // container for offices
+
+    // Hide popup initially
+    office_popup.style.display = 'none';
+
+    // Open popup
+    office_popup_add_btn.addEventListener('click', () => {
+      office_popup.style.display = 'flex';
+    });
+
+    // Close popup
+    office_close_btn_popup.addEventListener('click', () => {
+      office_popup.style.display = 'none';
+    });
+
+    // Click outside popup closes it
+    office_popup.addEventListener('click', (e) => {
+      if (e.target === office_popup) {
+        office_popup.style.display = 'none';
+      }
+    });
+
+    // Function to create new office element
+    function createOffice(country, address, phone) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('inner_presence');
+      wrapper.style.display = 'flex';
+      wrapper.style.alignItems = 'center';
+      wrapper.style.justifyContent = 'space-between';
+      wrapper.style.marginBottom = '10px';
+
+      const officeDiv = document.createElement('div');
+      officeDiv.classList.add('office');
+      officeDiv.innerHTML = `
+      <label for="country">country : <input value="${country}"></label>
+      <label for="address">Adress : <input value="${address}"></label>
+      <label for="presence_phone">Phone : <input value="${phone}"></label>
+
+    `;
+
+      const trashBtn = document.createElement('button');
+      trashBtn.classList.add('danger');
+      trashBtn.innerHTML = `<i data-lucide="trash" class="danger" style="width:30px; height:30px;backgroundColor : red"></i>`;
+
+      // Trash button click removes the office wrapper
+      trashBtn.addEventListener('click', () => {
+        wrapper.remove();
+      });
+
+      wrapper.appendChild(officeDiv);
+      wrapper.appendChild(trashBtn);
+
+      return wrapper;
+    }
+
+    // Add new office
+    office_add_btn_popup.addEventListener('click', () => {
+      const country = office_popup.querySelector('input[placeholder="United States"]').value;
+      const address = office_popup.querySelector('input[placeholder^="123"]').value;
+      const phone = office_popup.querySelector('input[placeholder^="+1"]').value;
+
+      if (!country && !address && !phone) return; // do not add empty
+
+      const newOffice = createOffice(country, address, phone);
+
+      // Add new office at the top
+      office_container.prepend(newOffice);
+
+      // Clear popup inputs
+      office_popup.querySelector('input[placeholder="United States"]').value = '';
+      office_popup.querySelector('input[placeholder^="123"]').value = '';
+      office_popup.querySelector('input[placeholder^="+1"]').value = '';
+
+      // Close popup
+      office_popup.style.display = 'none';
+
+      // Re-initialize lucide icons
+      if (window.lucide) lucide.replace();
+    });
+
+    // --- Optional: Make existing trash buttons work ---
+    document.querySelectorAll('#office_container .danger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.remove();
+      });
+    });
   </script>
+
+
 </body>
 
 </html>

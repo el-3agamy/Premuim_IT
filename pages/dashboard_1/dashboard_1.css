@@ -331,8 +331,138 @@ textarea:focus {
   z-index: 999;
 }
 
+/* Popup Styles */
+.popup-overlay {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(98, 43, 43, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  padding: 20px;
+}
 
-@media (max-width : 738px){
+.popup-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.popup-content.client-logo-popup {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.popup-content.industry-popup {
+  max-width: 60%;
+  margin: auto;
+}
+
+.popup-content.office-popup {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.popup-content.service-popup {
+  max-width: 60%;
+  margin: auto;
+}
+
+.popup-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.popup-btn-add {
+  background-color: rgb(62, 117, 62);
+  color: #fff;
+  padding: 10px 24px;
+}
+
+.popup-btn-close {
+  background-color: red;
+  color: #fff;
+  padding: 10px 24px;
+}
+
+/* Mobile Responsive Styles for Popups */
+@media (max-width: 768px) {
+  .contact{
+    display: flex;
+    flex-direction: column !important;
+  }
+  .contact .row{
+    flex-direction: column !important;
+  }
+
+   .office-mobile{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .po pup-overlay {
+    padding: 10px;
+  }
+
+  .popup-content {
+    padding: 20px;
+    max-height: 85vh;
+  }
+
+  .popup-content.client-logo-popup,
+  .popup-content.office-popup {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .popup-content.industry-popup,
+  .popup-content.service-popup {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .popup-btns {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .popup-btn-add,
+  .popup-btn-close {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .logo-row,
+  .inner_service {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .office-popup-inputs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 738px){
   .main_container{
     flex-direction: column;
   }
