@@ -497,8 +497,7 @@ nav {
 
 .see-all-btn {
     margin-top: 32px;
-    /* font-weight: 600;
-    font-size: 14px; */
+   
      font-weight: 700;
     font-size: 20px;
     border-bottom: 2px solid var(--primary-color);
@@ -508,7 +507,6 @@ nav {
 /* Statistics Section */
 .stats-section {
     padding: 100px 0;
-    /* background: var(--bg-light); */
     background-color: #F9FAFB;
     text-align: center;
 }
@@ -572,9 +570,7 @@ nav {
 }
 
 .sap-grid {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px; */
+ 
 
     display: flex;
     gap: 24px;
@@ -596,7 +592,6 @@ nav {
 }
 
 .sap-card-icon {
-    /* font-size: 12px; */
     margin: auto;
     width: 48px;
     height: 48px;
@@ -663,7 +658,6 @@ nav {
 .industry-icon-box {
     width: 40px;
     height: 40px;
-    /* padding: 10px; */
     background: #FFF4F4;
     color: var(--primary-color);
     border-radius: 50%;
@@ -752,7 +746,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    flex: 1 1 45%; /* takes roughly half the width, responsive */
+    flex: 1 1 45%; 
     min-width: 300px;
 }
 
@@ -797,17 +791,17 @@ nav {
     padding: 40px;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
-    flex: 1 1 45%; /* takes roughly half the width, responsive */
+    flex: 1 1 45%; 
     min-width: 300px;
 }
 
 /* Form Groups */
 .form-group-half {
-    flex: 1 1 48%; /* roughly half-width */
+    flex: 1 1 48%; 
 }
 
 .form-group-full {
-    flex: 1 1 100%; /* full width */
+    flex: 1 1 100%; 
 }
 
 .form-label {
@@ -929,9 +923,9 @@ button.loading .btn-loader {
     @media (max-width: 768px) {
           .footer-main {
         flex-direction: column !important;
-        align-items: center;      /* center horizontally */
-        gap: 16px;                /* space between social links, logo, and copyright */
-        text-align: center;       /* optional: center text inside */
+        align-items: center;      
+        gap: 16px;                
+        text-align: center;       
     }
         .about__wrapper {
             flex-direction: column;
@@ -1014,15 +1008,7 @@ button.loading .btn-loader {
         padding: 0 20px;
     }
 
-    /* Stack grid layouts */
-    div[style*="grid-template-columns: 1fr 1fr"],
-    div[style*="grid-template-columns: 1fr 1.2fr"],
-    div[style*="grid-template-columns: 1.2fr 1fr"],
-    div[style*="repeat(3, 1fr)"],
-    div[style*="repeat(5, 1fr)"] {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
+    
 
     /* Reverse some rows for mobile */
     div[style*="grid-template-columns: 1.2fr 1fr"] {
@@ -1050,8 +1036,7 @@ button.loading .btn-loader {
 
     /* SAP Section */
     .sap-grid {
-        /* grid-template-columns: 1fr;
-        gap: 24px; */
+      
         flex-direction: column;
         gap: 30px;
     }
@@ -1093,6 +1078,9 @@ button.loading .btn-loader {
 
     .form-group-half {
         grid-column: span 2;
+    }
+    #industries{
+        padding-top: 50px;
     }
 }
 

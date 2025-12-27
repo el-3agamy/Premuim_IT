@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Admin Content Builder</title>
@@ -10,284 +11,275 @@
 
   <link rel="stylesheet" href="dashboard_1.css" />
 </head>
+
 <body>
 
-  <div class="main_container" >
+  <div class="main_container">
     <aside>
-     
-          <div class="nav-logo footer-logo">
-            <img src="../../assets/footer_logo.png" alt="Premium IT Logo">
-            <div class="nav-logo-text">
-               <span  id="aside_first_span" style="color: red;" > Premium</span> 
-               <span  id="aside_second_span" style="color: rgb(87, 83, 83);" >IT</span> <br>
-                <span  id="aside_third_span" style="color: rgb(244, 238, 238);" >Information Technology</span>
-            </div>
-        </div>
-        <div class="aside_content">
-         
-            <i data-lucide="book"></i>
 
-
-         <p>
-          Home Content
-         </p>
+      <div class="nav-logo footer-logo">
+        <img src="../../assets/footer_logo.png" alt="Premium IT Logo">
+        <div class="nav-logo-text">
+          <span id="aside_first_span" style="color: red;"> Premium</span>
+          <span id="aside_second_span" style="color: rgb(87, 83, 83);">IT</span> <br>
+          <span id="aside_third_span" style="color: rgb(244, 238, 238);">Information Technology</span>
         </div>
-      
-    </aside>
-    
-    <main  >
-    <nav>
-      <div>
+      </div>
+      <div class="aside_content">
+        <i data-lucide="book"></i>
         <p>
-          Editing : Home Content
+          Home Content
         </p>
       </div>
-      <ul style="list-style: none; display: flex; justify-content: space-around;">
-        <li><button>Discard Change</button></li>
-        <li><button>Save Draft</button></li>
-        <li><button>Puplish</button></li>
-      </ul>
-    </nav>
 
- <div class="container">
-     <!-- HERO -->
-    <section class="card">
-      <h3>Hero Section</h3>
-      <p class="muted">Main hero text appears at the top of your website</p>
+    </aside>
 
-      <label>Hero title</label>
-      <input value="Enterprise Solutions That Drive Innovation">
-
-      <label>Hero subtitle</label>
-      <input value="Transform your business with cutting-edge technology and expert consulting services">
-
-      <div class="row">
-        <div class="col">
-          <label>Primary button text</label>
-          <input value="Get Started">
+    <main>
+      <nav>
+        <div>
+          <p>
+            Editing : Home Content
+          </p>
         </div>
-        <div class="col">
-          <label>Primary button URL</label>
-          <input value="/contact">
-        </div>
-      </div>
+        <ul>
+          <li><button>Discard Change</button></li>
+          <li><button>Save Draft</button></li>
+          <li><button>Puplish</button></li>
+        </ul>
+      </nav>
 
-      <label>Hero background image</label>
-      <div class="upload">
-        <i data-lucide="image"></i>
-        <span>Upload new image</span>
-        <button>Replace</button>
-      </div>
-    </section>
+      <div class="container">
+        <!-- HERO -->
+        <section class="card">
+          <h3>Hero Section</h3>
+          <p class="muted">Main hero text appears at the top of your website</p>
 
-    <!-- STATS -->
-    <section class="card">
-      <h3>Stats Section</h3>
-      <p class="muted">Key Statistics displayed below the hero</p>
+          <label>Hero title</label>
+          <input value="Enterprise Solutions That Drive Innovation">
 
-      <div class="stat">
-        <input value="25+">
-        <input value="Years in Business">
-        <label class="switch"><input type="checkbox" checked><span></span></label>
-      </div>
+          <label>Hero subtitle</label>
+          <input value="Transform your business with cutting-edge technology and expert consulting services">
 
-      <div class="stat">
-        <input value="500+">
-        <input value="Customers">
-        <label class="switch"><input type="checkbox" checked><span></span></label>
-      </div>
+          <div class="row">
+            <div class="col">
+              <label>Primary button text</label>
+              <input value="Get Started">
+            </div>
+            <div class="col">
+              <label>Primary button URL</label>
+              <input value="/contact">
+            </div>
+          </div>
 
-      <div class="stat">
-        <input value="200+">
-        <input value="Global Partners">
-        <label class="switch"><input type="checkbox" checked><span></span></label>
-      </div>
-    </section>
+          <label>Hero background image</label>
+          <div class="upload">
+            <i data-lucide="image"></i>
+            <span>Upload new image</span>
+            <button> <input type="file" name="" id="" accept="image/*"> </button>
+          </div>
+        </section>
 
-    <!-- CLIENT LOGOS -->
-    <section class="card">
-      <h3>Client Logos</h3>
+        <!-- STATS -->
+        <section class="card">
+          <h3>Stats Section</h3>
+          <p class="muted">Key Statistics displayed below the hero</p>
 
-      <div class="update">
-        <div class="logo-row">
-        <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme" ></label>
-        <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label> 
-        <button class="danger" ><i data-lucide="trash-2"></i></button>
-        
-      </div>
-      <div>
-         <label>Logo</label>
-      <div class="upload">
-        <i data-lucide="image"></i>
-        <span>Upload new image</span>
-        <button>Replace</button>
-      </div>
-      </div>
-      <p>Company logo (recommended: transparent PNG, 200x100px)</p>
-      </div>
-      <div class="update">
-        <div class="logo-row">
-        <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme" ></label>
-        <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label> 
-        <button class="danger"><i data-lucide="trash-2"></i></button>
-        
-      </div>
-      <div>
-         <label>Logo</label>
-      <div class="upload">
-        <i data-lucide="image"></i>
-        <span>Upload new image</span>
-        <button>Replace</button>
-      </div>
-      </div>
-      <p>Company logo (recommended: transparent PNG, 200x100px)</p>
-      </div>
+          <div class="stat">
+            <input value="25+">
+            <input value="Years in Business">
+            <label class="switch"><input type="checkbox" checked><span></span></label>
+          </div>
 
-      <!-- <div class="logo-row">
-        <input value="Tech Solutions">
-        <input value="https://techsolutions.com">
-        <button class="danger"><i data-lucide="trash-2"></i></button>
-      </div> -->
+          <div class="stat">
+            <input value="500+">
+            <input value="Customers">
+            <label class="switch"><input type="checkbox" checked><span></span></label>
+          </div>
 
-      <button class="add">+ Add client logo</button>
-    </section>
+          <div class="stat">
+            <input value="200+">
+            <input value="Global Partners">
+            <label class="switch"><input type="checkbox" checked><span></span></label>
+          </div>
+        </section>
 
-    <!-- ABOUT -->
-    <section class="card">
-      <h3>About Section</h3>
+        <!-- CLIENT LOGOS -->
+        <section class="card">
+          <h3>Client Logos</h3>
 
-      <label>About title</label>
-      <input value="Trusted Partner for Digital Innovation">
+          <div class="update">
+            <div class="logo-row">
+              <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
+              <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
+              <button class="danger"><i data-lucide="trash-2"></i></button>
 
-      <label>About description</label>
-      <textarea>
-We deliver comprehensive technology solutions that help organizations innovate, optimize, and scale.
+            </div>
+            <div>
+              <label>Logo</label>
+              <div class="upload">
+                <i data-lucide="image"></i>
+                <span>Upload new image</span>
+                <button><input type="file" accept="image/*" /></button>
+
+              </div>
+            </div>
+            <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
+          </div>
+          <div class="update">
+            <div class="logo-row">
+              <label for="Acme" style="flex-grow: 1;">Client Name :<input value="Acme Corp" id="Acme"></label>
+              <label for="Acme_url" style="flex-grow: 1;">Client URL : <input value="https://acme.com"></label>
+              <button class="danger"><i data-lucide="trash-2"></i></button>
+
+            </div>
+            <div>
+              <label>Logo</label>
+              <div class="upload">
+                <i data-lucide="image"></i>
+                <span>Upload new image</span>
+                <button><input type="file" accept="image/*" /></button>
+              </div>
+            </div>
+            <p id="logo_span_recomnd">Company logo (recommended: transparent PNG, 200x100px)</p>
+          </div>
+
+
+          <button class="add">+ Add client logo</button>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="card">
+          <h3>About Section</h3>
+
+          <label>About title</label>
+          <input value="Trusted Partner for Digital Innovation">
+
+          <label>About description</label>
+          <textarea>
+               We deliver comprehensive technology solutions that help organizations 
+               innovate, optimize, and scale.
       </textarea>
 
-      <label>Value bullets</label>
-      <input value="24/7 enterprise-grade support">
-      <input value="Industry-leading security standards">
+          <label>Value bullets</label>
+          <input value="24/7 enterprise-grade support">
+          <input value="Industry-leading security standards">
 
-      <label>About image</label>
-      <div class="upload">
-        <i data-lucide="image"></i>
-        <span>Team collaboration</span>
-        <button>Replace</button>
+          <label>About image</label>
+          <div class="upload">
+            <i data-lucide="image"></i>
+            <span>Team collaboration</span>
+            <button><input type="file" accept="image/*" /></button>
+
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="card">
+          <h3>Services
+            <br>
+            <span style="font-size: 14px; font-weight: 200px; color: #575454;">Service You Provide For Clients.</span>
+          </h3>
+
+          <div class="service">
+            <div class="inner_service">
+              <label for="service_title">Service Title : <input value="Cloud Transformation"></label>
+              <label for="service_icon">Service Icon : <input value="Cloud"></label>
+            </div>
+            <div class="">
+              <label for="service_description">Service description : <textarea
+                  id="service_description">Scalable migration and management of cloud infrastructure</textarea></label>
+            </div>
+            <div class="inner_service">
+              <label for="cta_label">CTA Label(Optianal) : <input value="Cloud"></label>
+              <label for="cta_url">CTA URL(Optianal) : <input value="AWS, Azure, GCP"></label>
+            </div>
+          </div>
+
+
+
+          <button class="add">+ Add service</button>
+        </section>
+
+        <!-- INDUSTRIES -->
+        <section class="card">
+          <h3>Industries</h3>
+
+          <div class="industry">
+            <label for="industry_title">Industry Title : <input id="industry_title" value="Healthcare"></label>
+            <label for="industry_description"> Industry description : <textarea
+                id="industry_description">HIPAA-compliant solutions for medical institutions</textarea></label>
+            <label for="key_benfites">
+              Key benfites
+              <input type="text" value="Electronic health records integration" name="" id="key_benfites" /> <br> <br>
+              <input type="text" value="Patient data security" name="" id="key_benfites" /> <br> <br>
+              <input type="text" value="Telemedicine infrastructure" name="" id="key_benfites" /><br> <br>
+            </label>
+            <div>
+              <label>Logo</label>
+              <div class="upload">
+                <i data-lucide="image"></i>
+                <span>Upload new image</span>
+                <button><input type="file" accept="image/*" /></button>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <button class="add">+ Add industry</button>
+        </section>
+
+        <!-- GLOBAL PRESENCE -->
+        <section class="card">
+          <h3>Global Presence</h3>
+          <p>Your Office Locations WorldWide: </p>
+
+          <div class="inner_presence">
+
+            <div class="office">
+              <label for="country">country : <input placeholder="United States"></label>
+              <label for="address">Adress : <input placeholder="123 Tech Road, San Francisco, CA"></label>
+              <label for="presence_phone">Phone : <input placeholder="+1 555 123 4567"></label>
+            </div>
+            <button class="danger"><i data-lucide="trash-2"></i></button>
+
+          </div>
+          <div>
+        
+          </div>
+
+          <button class="add">+ Add office</button>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="card contact">
+          <h3>Contact Form</h3>
+
+          <div class="row">
+            <input placeholder="First name">
+            <input placeholder="Last name">
+          </div>
+
+          <div class="row">
+            <input placeholder="Email">
+            <input placeholder="Phone number">
+          </div>
+
+          <textarea placeholder="Your message"></textarea>
+
+          <input value="Thank you! We'll get back to you within 24 hours.">
+
+          <input class="error" value="Sorry, something went wrong. Please try again later.">
+        </section>
       </div>
-    </section>
 
-    <!-- SERVICES -->
-    <section class="card">
-      <h3>Services
-        <br>
-        <span style="font-size: 14px; font-weight: 200px; color: #575454;">Service You Provide For Clients.</span>
-      </h3>
+    </main>
 
-      <div class="service">
-        <div class="inner_service">
-          <label for="service_title">Service Title : <input value="Cloud Transformation"></label>
-           <label for="service_icon">Service Icon : <input value="Cloud"></label>
-        </div>
-        <div class="">
-          <label for="service_description">Service description : <textarea id="service_description">Scalable migration and management of cloud infrastructure</textarea></label>
-        </div>
-        <div class="inner_service">
-          <label for="cta_label">CTA Label(Optianal) : <input value="Cloud"></label>
-          <label for="cta_url">CTA URL(Optianal) : <input value="AWS, Azure, GCP"></label>
-        </div>
-      </div>
-
-      <!-- <div class="service">
-        <input value="Cybersecurity">
-        <input value="Security">
-        <textarea>Advanced threat protection and compliance management</textarea>
-        <input value="ISO, SOC2">>
-      </div> -->
-
-      <button class="add">+ Add service</button>
-    </section>
-
-    <!-- INDUSTRIES -->
-    <section class="card">
-      <h3>Industries</h3>
-
-      <div class="industry">
-        <label for="industry_title">Industry Title : <input id="industry_title" value="Healthcare"></label>
-        <label for="industry_description"> Industry description : <textarea id="industry_description">HIPAA-compliant solutions for medical institutions</textarea></label>
-        <label for="key_benfites">
-          Key benfites
-          <input type="text" value="Electronic health records integration" name="" id="key_benfites" /> <br> <br>
-          <input type="text" value="Patient data security" name="" id="key_benfites" /> <br> <br>
-          <input type="text" value="Telemedicine infrastructure" name="" id="key_benfites" /><br> <br>
-        </label>
-         <div>
-         <label>Logo</label>
-      <div class="upload">
-        <i data-lucide="image"></i>
-        <span>Upload new image</span>
-        <button>Replace</button>
-      </div>
-      </div>
-      
-      </div>
-
-
-      <button class="add">+ Add industry</button>
-    </section>
-
-    <!-- GLOBAL PRESENCE -->
-    <section class="card">
-      <h3>Global Presence</h3>
-      <p>Your Office Locations WorldWide: </p>
-
-      <div class="inner_presence">
-
-        <div class="office">
-          <label for="country">country : <input placeholder="United States"></label>
-          <label for="address">Adress : <input placeholder="123 Tech Road, San Francisco, CA"></label>
-          <label for="presence_phone">Phone : <input placeholder="+1 555 123 4567"></label>
-        </div>
-        <button class="danger"><i data-lucide="trash-2"></i></button>
-
-      </div>
-     <div>
-       <!-- <div class="office">
-        <input value="United Kingdom">
-        <input value="45 Innovation Street, London">
-        <input value="+44 20 1234 5678">
-      </div> -->
-     </div>
-
-      <button class="add">+ Add office</button>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="card contact">
-      <h3>Contact Form</h3>
-
-      <div class="row">
-        <input placeholder="First name">
-        <input placeholder="Last name">
-      </div>
-
-      <div class="row">
-        <input placeholder="Email">
-        <input placeholder="Phone number">
-      </div>
-
-      <textarea placeholder="Your message"></textarea>
-
-      <input value="Thank you! We'll get back to you within 24 hours.">
-
-      <input class="error" value="Sorry, something went wrong. Please try again later.">
-    </section>
- </div>
-
-  </main>
-
- </div>
+  </div>
   <script>
     lucide.createIcons();
   </script>
 </body>
+
 </html>

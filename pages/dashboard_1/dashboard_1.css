@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   font-family: Inter, system-ui, sans-serif;
@@ -10,7 +12,6 @@ body {
 }
 
 .container {
-  /* width: 720px; */
   width: 100%;
   margin: auto;
   display: flex;
@@ -19,15 +20,21 @@ body {
   padding: 3px 30px;
 }
 
+#logo_span_recomnd {
+  color: #3e3b3b;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .card {
   background: #fff;
-  
+
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
 }
 
 h3 {
@@ -44,7 +51,8 @@ label {
   color: #374151;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
@@ -72,6 +80,8 @@ textarea {
 .upload {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 10px;
   border: 1px dashed #cbd5e1;
   padding: 10px;
@@ -97,7 +107,6 @@ button {
 
 .danger {
   color: #dc2626;
-  /* border-color: #dc2626; */
   border: none;
 }
 
@@ -110,65 +119,68 @@ button {
 
 
 /*  */
-ul li:nth-child(1) button{
+ul li:nth-child(1) button {
   color: #b4b0b0;
 }
-ul li:nth-child(2) button{
+
+ul li:nth-child(2) button {
   color: #000;
 }
-ul li:nth-child(3) button{
+
+ul li:nth-child(3) button {
   color: #fff;
   background-color: #dc2626;
 }
-aside{
-  height: 100vh; 
-  background-color:#101828;
-   width: 330px;
+
+aside {
+  height: 100vh;
+  background-color: #101828;
+  width: 330px;
 }
-.nav-logo{
+
+.nav-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
   gap: 3px;
-  
+
 }
 
-.aside_content{
+.aside_content {
   width: 90%;
   margin: auto;
   border-radius: 10px;
-display: flex;
-justify-content: center;
-gap: 10px;
-align-items: center;
-background-color: #dc2626;
-color: #fff;
-margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  background-color: #dc2626;
+  color: #fff;
+  margin-top: 20px;
 }
 
-.main_container{
-  display: flex; 
+.main_container {
+  display: flex;
   justify-content: space-between;
   gap: 0;
-padding-bottom: 50px;
+  padding-bottom: 50px;
 }
-/* main{
-  position: relative;
-} */
-nav{
+
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding:5px 15px;
+  padding: 5px 15px;
   width: 100% !important;
   margin-bottom: 30px;
   border: 1px solid #fffffff1;
-  /* position: fixed; */
-  
+
 }
-nav ul{
+
+nav ul {
 
   list-style: none;
   display: flex;
@@ -176,15 +188,16 @@ nav ul{
   align-items: center;
   gap: 10px;
 }
-.stat{
-  padding: 20px ;
- border: 1px solid #e2e2e2;
- border-radius: 10px;
+
+.stat {
+  padding: 20px;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
 }
 
 
-.update{
-  background:#f9fafb;
+.update {
+  background: #f9fafb;
   padding: 20px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
@@ -192,22 +205,22 @@ nav ul{
 }
 
 
-.service{
-  background:#f9fafb;
-   padding: 20px;
+.service {
+  background: #f9fafb;
+  padding: 20px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
 }
 
-.inner_service{
+.inner_service {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   align-items: center;
-  margin:20px 0;
+  margin: 20px 0;
 }
 
-.inner_presence{
+.inner_presence {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -217,13 +230,14 @@ nav ul{
   border-radius: 10px;
 }
 
-.industry{
+.industry {
   padding: 30px;
   border: 1px solid #e2e2e2;
   border-radius: 10px;
-  background:#f9fafb;
+  background: #f9fafb;
 
 }
+
 /*  */
 .stat input,
 .logo-row input {
@@ -259,11 +273,11 @@ nav ul{
   transition: .2s;
 }
 
-.switch input:checked + span {
+.switch input:checked+span {
   background: #2563eb;
 }
 
-.switch input:checked + span::before {
+.switch input:checked+span::before {
   transform: translateX(20px);
 }
 
@@ -277,17 +291,22 @@ nav ul{
   border-color: #dc2626;
   color: #dc2626;
 }
-/* updating  */
-.contact{
-  /* margin-bottom: 30px; */
+
+main ul {
+  list-style: none; 
+  display: flex; 
+  justify-content: space-around;
+
 }
+/* updating  */
+
+
 input,
 textarea {
   width: 100%;
   padding: 10px 12px;
   border-radius: 6px;
 
-  /* التغيير هنا */
   border: none;
   background: #F3F3F5;
 
@@ -295,9 +314,55 @@ textarea {
   color: #111827;
 }
 
-/* إزالة أي outline افتراضي */
 input:focus,
 textarea:focus {
   outline: none;
   background: #ededf0;
+}
+
+@media (max-width : 738px){
+  .main_container{
+    flex-direction: column;
+  }
+  .main_container aside{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+
+  }
+
+  aside .nav-logo-text{
+    font-size: 14px;
+
+  }
+  aside .aside_content {
+    padding: 0 !important;
+    width: 150px ;
+    padding: 5px;
+  }
+  main{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main div p {
+    font-size: 14px;
+    display: none;
+  }
+  main ul {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-inline-start: 0;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px;
+
+  }
+  main ul li:nth-child(1) button{
+      background-color: #000;
+  }
 }
